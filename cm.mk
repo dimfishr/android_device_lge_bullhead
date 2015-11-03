@@ -11,6 +11,10 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 # Inherit device configuration
 $(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
 
+# TWRP
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/twrp.fstab:recovery/root/etc/twrp.fstab
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_bullhead
 PRODUCT_BRAND := google
